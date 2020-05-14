@@ -28,6 +28,8 @@ public class HomeController {
         model.addAttribute("instytutions",instytutions);
         int donationsQuantity = donationRepository.findDonationsQuantity();
         model.addAttribute("donationsQuantity",donationsQuantity);
+        int donationsCount = donationRepository.findDonationsCount();
+        model.addAttribute("donationsCount",donationsCount);
         return "index";
     }
 }
