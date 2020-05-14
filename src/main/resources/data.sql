@@ -5,3 +5,8 @@ INSERT INTO instytution(name, description) VALUES ('Bez domu', 'Pomoc dla osób 
 INSERT INTO donation(quantity) VALUES (2)
 INSERT INTO donation(quantity) VALUES (7)
 INSERT INTO donation(quantity) VALUES (8)
+INSERT INTO category(name) VALUES ('Ubrania, do wyrzucenia')
+INSERT INTO category(name) VALUES ('Ubrania, które nadają sie do ponownego użycia')
+INSERT INTO category(name) VALUES ('Zabawki')
+INSERT INTO category(name) VALUES ('Książki')
+INSERT INTO category(name) VALUES ('Inne')

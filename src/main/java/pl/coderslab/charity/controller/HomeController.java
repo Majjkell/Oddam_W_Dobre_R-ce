@@ -17,19 +17,22 @@ public class HomeController {
     private final DonationRepository donationRepository;
 
     @Autowired
-    public HomeController (InstytutionRepository instytutionRepository,DonationRepository donationRepository){
+    public HomeController(InstytutionRepository instytutionRepository, DonationRepository donationRepository) {
         this.instytutionRepository = instytutionRepository;
         this.donationRepository = donationRepository;
     }
 
     @RequestMapping("/")
-    public String homeAction(Model model){
+    public String homeAction(Model model) {
         List<Instytution> instytutions = instytutionRepository.findAll();
-        model.addAttribute("instytutions",instytutions);
+        model.addAttribute("instytutions", instytutions);
+
         int donationsQuantity = donationRepository.findDonationsQuantity();
-        model.addAttribute("donationsQuantity",donationsQuantity);
+        model.addAttribute("donationsQuantity", donationsQuantity);
+
         int donationsCount = donationRepository.findDonationsCount();
-        model.addAttribute("donationsCount",donationsCount);
+        model.addAttribute("donationsCount", donationsCount);
+
         return "index";
     }
 }
