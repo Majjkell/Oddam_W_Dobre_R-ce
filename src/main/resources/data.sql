@@ -2,3 +2,6 @@ INSERT INTO instytution(name, description) VALUES ('Dbam o Zdrowie', 'Pomoc dzie
 INSERT INTO instytution(name, description) VALUES ('A kogo', 'Pomoc wybudzaniu dzieci ze śpiączki.')
 INSERT INTO instytution(name, description) VALUES ('Dla dzieci', 'Pomoc osobom znajdującym się w trudnej sytuacji życiowej.')
 INSERT INTO instytution(name, description) VALUES ('Bez domu', 'Pomoc dla osób nie posiadających miejsca zamieszkania.')
+INSERT INTO donation(quantity) VALUES (2)
+INSERT INTO donation(quantity) VALUES (7)
+INSERT INTO donation(quantity) VALUES (8)
