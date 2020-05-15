@@ -21,9 +21,9 @@ public class Donation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private int quantity;
-    @OneToOne
-    private Category category;
-    @OneToOne
+    @OneToMany
+    private List<Category> categories;
+    @ManyToOne
     private Instytution instytution;
     private String street;
     private String city;

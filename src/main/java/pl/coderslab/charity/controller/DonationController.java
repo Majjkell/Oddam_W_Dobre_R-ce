@@ -11,6 +11,7 @@ import pl.coderslab.charity.repository.CategoryRepository;
 import pl.coderslab.charity.repository.DonationRepository;
 import pl.coderslab.charity.repository.InstytutionRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -33,10 +34,17 @@ public class DonationController {
     public String donationForm(Model model){
         List<Instytution> instytutions = instytutionRepository.findAll();
         model.addAttribute("instytutions",instytutions);
-        List<Category> categories = categoryRepository.findAll();
-        model.addAttribute("categories",categories);
         Donation donation = new Donation();
         model.addAttribute("donation",donation);
+
+        List<Category> categoriess = categoryRepository.findAll();
+        List<String> categories = new ArrayList<>();
+        for (Category c:categoriess) {
+            String namee = c.getName();
+            categories.add(namee);
+        }
+        model.addAttribute("categories",categories);
+
         return "form";
     }
 }
