@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import pl.coderslab.charity.model.Category;
 import pl.coderslab.charity.model.Donation;
 import pl.coderslab.charity.model.Instytution;
@@ -34,17 +36,20 @@ public class DonationController {
     public String donationForm(Model model){
         List<Instytution> instytutions = instytutionRepository.findAll();
         model.addAttribute("instytutions",instytutions);
+
         Donation donation = new Donation();
         model.addAttribute("donation",donation);
 
-        List<Category> categoriess = categoryRepository.findAll();
-        List<String> categories = new ArrayList<>();
-        for (Category c:categoriess) {
-            String namee = c.getName();
-            categories.add(namee);
-        }
+        List<Category> categories = categoryRepository.findAll();
         model.addAttribute("categories",categories);
 
         return "form";
+    }
+
+    @PostMapping("/form")
+    public String confirmForm(@ModelAttribute Donation donation){
+        donationRepository.save(donation);
+        System.out.println(donation);
+        return "redirect:formsubmit";
     }
 }
