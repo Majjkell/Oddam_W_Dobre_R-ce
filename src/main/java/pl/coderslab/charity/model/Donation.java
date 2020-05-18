@@ -28,7 +28,7 @@ public class Donation {
     private  String zipCode;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate pickUpDate;
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @DateTimeFormat(pattern = "HH:mm")
     private LocalTime pickUpTime;
     private String pickUpComment;
 }

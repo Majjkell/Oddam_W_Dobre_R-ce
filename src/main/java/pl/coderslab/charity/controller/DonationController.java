@@ -50,6 +50,6 @@ public class DonationController {
     public String confirmForm(@ModelAttribute Donation donation){
         donationRepository.save(donation);
         System.out.println(donation);
-        return "redirect:formsubmit";
+        return "form-confirm";
     }
 }
