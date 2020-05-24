@@ -98,6 +98,8 @@
                                 type="checkbox"
                                 name="categories"
                                 value="${category.id}"
+                                id="category"
+                                stringValue="${category.name}"
                         />
 <%--                        <form:checkbox path="categories" value="${category.id}" />--%>
                         <span class="checkbox" ></span>
@@ -242,8 +244,8 @@
                         <ul>
                             <li>
                                 <span class="icon icon-bag"></span>
-                                <span class="summary--text">
-                                    ${donation.quantity}
+                                <span class="summary--text" id="categoryresult">
+
                                 </span>
                             </li>
 

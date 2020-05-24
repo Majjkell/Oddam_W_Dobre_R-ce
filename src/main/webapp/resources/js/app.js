@@ -164,6 +164,15 @@ document.addEventListener("DOMContentLoaded", function() {
       this.$step.parentElement.hidden = this.currentStep >= 5;
 
       // TODO: get data from inputs and show them in summary
+      // var category = document.getElementById("category").value;
+      var categores = document.querySelectorAll('#category:checked');
+      //document.querySelectorAll('#category:checked')[0].getAttribute("stringValue");
+      var x = "";
+      categores.forEach(e=>{
+        x = x+e.getAttribute("stringValue")
+      })
+      document.getElementById("categoryresult").innerText = x;
+
     }
 
   }
