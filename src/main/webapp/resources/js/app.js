@@ -173,6 +173,10 @@ document.addEventListener("DOMContentLoaded", function() {
       })
       document.getElementById("categoryresult").innerText = x;
 
+      var instytution = document.querySelector('input[name="instytution"]:checked');
+      var b ="Fundacja \""+instytution.getAttribute("stringValue")+"\""
+      document.getElementById("instytutionresult").innerText = b;
+
     }
 
   }

@@ -141,7 +141,7 @@
                 <c:forEach items="${instytutions}" var="instytution">
                 <div class="form-group form-group--checkbox">
                     <label>
-                        <input type="radio" name="instytution" value="${instytution.id}" />
+                        <input type="radio" name="instytution" value="${instytution.id}" id="instytution" stringValue="${instytution.name}" />
 <%--                        <form:radiobutton path="instytution" value="${instytution.  id}"/>--%>
                         <span class="checkbox radio" path="instytution"></span>
                         <span class="description" path="instytution">
@@ -251,9 +251,9 @@
 
                             <li>
                                 <span class="icon icon-hand"></span>
-                                <span class="summary--text"
-                                >Dla fundacji "Mam marzenie" w Warszawie</span
-                                >
+                                <span class="summary--text" id="instytutionresult">
+
+                                </span>
                             </li>
                         </ul>
                     </div>
