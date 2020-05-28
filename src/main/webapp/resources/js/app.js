@@ -164,18 +164,52 @@ document.addEventListener("DOMContentLoaded", function() {
       this.$step.parentElement.hidden = this.currentStep >= 5;
 
       // TODO: get data from inputs and show them in summary
-      // var category = document.getElementById("category").value;
       var categores = document.querySelectorAll('#category:checked');
-      //document.querySelectorAll('#category:checked')[0].getAttribute("stringValue");
       var x = "";
       categores.forEach(e=>{
         x = x+e.getAttribute("stringValue")
       })
-      document.getElementById("categoryresult").innerText = x;
+      document.getElementById("categoryResult").innerText = x;
 
       var instytution = document.querySelector('input[name="instytution"]:checked');
       var b ="Fundacja \""+instytution.getAttribute("stringValue")+"\""
-      document.getElementById("instytutionresult").innerText = b;
+      document.getElementById("instytutionResult").innerText = b;
+
+      var quantity = document.getElementById("quantity").value+"Worki: ";
+      document.getElementById("quantityResult").innerText = quantity;
+
+      var street = document.getElementById("street").value;
+      document.getElementById("streetResult").innerText = street;
+
+      var city = document.getElementById("city").value;
+      document.getElementById("cityResult").innerText = city;
+
+      var zipCode = document.getElementById("zipCode").value;
+      document.getElementById("zipCodeResult").innerText = zipCode;
+
+      var date = document.getElementById("date").value;
+      document.getElementById("dateResult").innerText = date;
+
+      var time = document.getElementById("time").value;
+      document.getElementById("timeResult").innerText = time;
+
+      var comment = document.getElementById("comment").value;
+      document.getElementById("commentResult").innerText = comment;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
 
