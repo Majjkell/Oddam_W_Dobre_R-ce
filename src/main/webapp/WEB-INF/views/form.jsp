@@ -146,12 +146,10 @@
                   <div class="subtitle">
                     Cel i misja: ${instytution.description}
                   </div>
-                </span>
+                        </span>
                     </label>
                 </div>
                 </c:forEach>
-
-
                 <div class="form-group form-group--buttons">
                     <button type="button" class="btn prev-step">Wstecz</button>
                     <button type="button" class="btn next-step">Dalej</button>
@@ -167,40 +165,40 @@
                         <h4>Adres odbioru</h4>
                         <div class="form-group form-group--inline">
                             <label>
-                                Ulica <%--<input type="text" name="address" />--%><form:input path="street" id="street"/>
+                                Ulica <form:input path="street" id="street"/>
                             </label>
                         </div>
 
                         <div class="form-group form-group--inline">
                             <label>
-                                Miasto <%--<input type="text" name="city" />--%><form:input path="city" id="city"/>
+                                Miasto <form:input path="city" id="city"/>
                             </label>
                         </div>
 
                         <div class="form-group form-group--inline">
                             <label>
-                                Kod pocztowy <%--<input type="text" name="postcode" />--%><form:input path="zipCode" id="zipCode"/>
+                                Kod pocztowy <form:input path="zipCode" id="zipCode"/>
                             </label>
                         </div>
-
-                        <div class="form-group form-group--inline">
+                        <%-- ADD PhoneNumber To Donation And to the form (in the future) --%>
+                        <%--<div class="form-group form-group--inline">
                             <label>
-<%--                                Numer telefonu <input type="phone" name="phone" /><form:input path="address"/>--%>
+                                    Numer telefonu <input type="phone" name="phone" /><form:input path="address"/>
                             </label>
-                        </div>
+                        </div>--%>
                     </div>
 
                     <div class="form-section--column">
                         <h4>Termin odbioru</h4>
                         <div class="form-group form-group--inline">
                             <label>
-                                Data <%--<input type="date" name="data" />--%> <form:input path="pickUpDate" type="date" id="date"/>
+                                Data  <form:input path="pickUpDate" type="date" id="date"/>
                             </label>
                         </div>
 
                         <div class="form-group form-group--inline">
                             <label>
-                                Godzina <%--<input type="time" name="time" />--%> <form:input path="pickUpTime" type="time" id="time"/>
+                                Godzina <form:input path="pickUpTime" type="time" id="time"/>
                             </label>
                         </div>
 
